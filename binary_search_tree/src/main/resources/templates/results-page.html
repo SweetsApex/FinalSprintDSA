@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tree Structure</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Tree Structure</h1>
+<h2>Input Numbers: <span th:text="${tree.inputNumbers}"></span></h2>
+<pre th:text="${treeJson}"></pre>
+</body>
+</html>

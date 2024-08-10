@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Previous Trees</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            white-space: pre-wrap; /* Ensures it wraps as per the format */
+            word-wrap: break-word; /* Ensures long lines are broken */
+            overflow-x: auto; /* Adds a scrollbar if necessary */
+        }
+    </style>
+</head>
+<body>
+<h1>Previous Trees</h1>
+<div th:each="tree, iterStat : ${trees}">
+    <h2>Tree Structure</h2>
+    <p><strong>Previous Numbers:</strong> <span th:text="${tree.inputNumbers}"></span></p>
+    <pre th:text="${treeJsonList[iterStat.index]}"></pre>
+</div>
+</body>
+</html>
